@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B086A2BD-4D67-465D-869C-89FB4E5B4845}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AxisManualForm</RootNamespace>
+    <AssemblyName>AxisManualForm</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AxisControlMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AxisControlMainForm.Designer.cs">
+      <DependentUpon>AxisControlMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AxisParameterDataViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AxisParameterDataViewForm.designer.cs">
+      <DependentUpon>AxisParameterDataViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AxisPositionDataViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AxisPositionDataViewForm.designer.cs">
+      <DependentUpon>AxisPositionDataViewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AxisUnionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AxisUnionForm.designer.cs">
+      <DependentUpon>AxisUnionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IOTitleAndName.cs" />
+    <Compile Include="MotionCardIOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MotionCardIOForm.Designer.cs">
+      <DependentUpon>MotionCardIOForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AxisControlMainForm.resx">
+      <DependentUpon>AxisControlMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AxisParameterDataViewForm.resx">
+      <DependentUpon>AxisParameterDataViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AxisPositionDataViewForm.resx">
+      <DependentUpon>AxisPositionDataViewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AxisUnionForm.resx">
+      <DependentUpon>AxisUnionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MotionCardIOForm.resx">
+      <DependentUpon>MotionCardIOForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSVFile\CSVFile.csproj">
+      <Project>{dcf89ae1-1e77-406a-8355-eefc9e180ad4}</Project>
+      <Name>CSVFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyBoard\KeyBoard\KeyBoard.csproj">
+      <Project>{ed885bd0-9710-4b8b-8c00-2098e917964b}</Project>
+      <Name>KeyBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MotionCard\MotionCard.csproj">
+      <Project>{935fa6ab-809c-43f8-a320-451ba373e4bc}</Project>
+      <Name>MotionCard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyTool\MyTool.csproj">
+      <Project>{d2ace007-45f3-414d-88db-c6f253ab3f08}</Project>
+      <Name>MyTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCArrow\UCArrow.csproj">
+      <Project>{abb4c1ab-26f8-462a-8db7-bd0db41f3f27}</Project>
+      <Name>UCArrow</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

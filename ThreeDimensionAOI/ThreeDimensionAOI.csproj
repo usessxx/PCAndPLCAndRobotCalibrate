@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4E0ED594-A30F-4475-9634-AB1A46E07A0B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ThreeDimensionAVI</RootNamespace>
+    <AssemblyName>3D AVI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>3D AVI.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="halcondotnetxl">
+      <HintPath>..\ModelMatchLib\bin\Debug\halcondotnetxl.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="Newtonsoft.Json, Version=4.0.3.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MES\bin\Debug\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AlarmForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlarmForm.Designer.cs">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CreateNewProductDataFileForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreateNewProductDataFileForm.Designer.cs">
+      <DependentUpon>CreateNewProductDataFileForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InfoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InfoForm.Designer.cs">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LaunchForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LaunchForm.Designer.cs">
+      <DependentUpon>LaunchForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BaseForm.Designer.cs">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceAxesControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceAxesControlForm.Designer.cs">
+      <DependentUpon>MaintenanceAxesControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceCylinderControlForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceCylinderControlForm.Designer.cs">
+      <DependentUpon>MaintenanceCylinderControlForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProductRecipe.cs" />
+    <Compile Include="ProductSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductSelectForm.Designer.cs">
+      <DependentUpon>ProductSelectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="RecheckOrChangeBarcodeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RecheckOrChangeBarcodeForm.Designer.cs">
+      <DependentUpon>RecheckOrChangeBarcodeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsAdministratorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsAdministratorForm.Designer.cs">
+      <DependentUpon>SettingsAdministratorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingBaseForm.Designer.cs">
+      <DependentUpon>SettingBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceCameraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceCameraForm.Designer.cs">
+      <DependentUpon>MaintenanceCameraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsCameraCalibrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsCameraCalibrationForm.Designer.cs">
+      <DependentUpon>SettingsCameraCalibrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsGeneralForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsGeneralForm.Designer.cs">
+      <DependentUpon>SettingsGeneralForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SettingsProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingsProductForm.Designer.cs">
+      <DependentUpon>SettingsProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StateAndAlarmClass.cs" />
+    <Compile Include="TrackDisplayBasePointData.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TrackDisplayBasePointData.Designer.cs">
+      <DependentUpon>TrackDisplayBasePointData.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AlarmForm.resx">
+      <DependentUpon>AlarmForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CreateNewProductDataFileForm.resx">
+      <DependentUpon>CreateNewProductDataFileForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InfoForm.resx">
+      <DependentUpon>InfoForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LaunchForm.resx">
+      <DependentUpon>LaunchForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaseForm.resx">
+      <DependentUpon>BaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceAxesControlForm.resx">
+      <DependentUpon>MaintenanceAxesControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceCylinderControlForm.resx">
+      <DependentUpon>MaintenanceCylinderControlForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductSelectForm.resx">
+      <DependentUpon>ProductSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RecheckOrChangeBarcodeForm.resx">
+      <DependentUpon>RecheckOrChangeBarcodeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsAdministratorForm.resx">
+      <DependentUpon>SettingsAdministratorForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingBaseForm.resx">
+      <DependentUpon>SettingBaseForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceCameraForm.resx">
+      <DependentUpon>MaintenanceCameraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsCameraCalibrationForm.resx">
+      <DependentUpon>SettingsCameraCalibrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsGeneralForm.resx">
+      <DependentUpon>SettingsGeneralForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SettingsProductForm.resx">
+      <DependentUpon>SettingsProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TrackDisplayBasePointData.resx">
+      <DependentUpon>TrackDisplayBasePointData.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\3DAVIInspectHistoryBrowse\ThreeDAVIInspectHistoryBrowse.csproj">
+      <Project>{cab87138-6e44-4659-80f9-ca89c480d833}</Project>
+      <Name>ThreeDAVIInspectHistoryBrowse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AxisManualForm\AxisAndIOForm.csproj">
+      <Project>{b086a2bd-4d67-465d-869c-89fb4e5b4845}</Project>
+      <Name>AxisAndIOForm</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CSVFile\CSVFile.csproj">
+      <Project>{dcf89ae1-1e77-406a-8355-eefc9e180ad4}</Project>
+      <Name>CSVFile</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAM02AIAO\DAM02AIAO.csproj">
+      <Project>{f4484ae2-b470-49d5-89b8-2453763a357b}</Project>
+      <Name>DAM02AIAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HalconMVTec\HalconMVTec.csproj">
+      <Project>{128de380-a479-4492-a983-f21feef5409d}</Project>
+      <Name>HalconMVTec</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyBoard\KeyBoard\KeyBoard.csproj">
+      <Project>{ed885bd0-9710-4b8b-8c00-2098e917964b}</Project>
+      <Name>KeyBoard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MES\MES.csproj">
+      <Project>{3858828f-d496-4058-9910-53070501b05e}</Project>
+      <Name>MES</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MotionCard\MotionCard.csproj">
+      <Project>{935fa6ab-809c-43f8-a320-451ba373e4bc}</Project>
+      <Name>MotionCard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MyTool\MyTool.csproj">
+      <Project>{d2ace007-45f3-414d-88db-c6f253ab3f08}</Project>
+      <Name>MyTool</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UCArrow\UCArrow.csproj">
+      <Project>{ABB4C1AB-26F8-462A-8DB7-BD0DB41F3F27}</Project>
+      <Name>UCArrow</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserManager\UserManager.csproj">
+      <Project>{8c443b06-d039-49d4-8f01-f743c06fb32c}</Project>
+      <Name>UserManager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\XML\XMLFile.csproj">
+      <Project>{99ae762a-47b7-4830-8c4b-36d249ef804f}</Project>
+      <Name>XMLFile</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NG LOGO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OK Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="3D AVI.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
