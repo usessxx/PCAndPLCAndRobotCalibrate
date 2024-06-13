@@ -19,7 +19,7 @@ namespace FX5UPLC
         private Socket tcpClient;
         private IPAddress ipaddress;
         public bool bl_PCConnectPLCFlag;//PC与PLC已连接FLAG
-
+        //public bool bl_PCConnectPLCFlag;//PC与PLC已连接FLAG
         public FX5UPLCSLMP(string ip, int portnumber)
         {
             IP = ip;
